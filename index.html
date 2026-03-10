@@ -8,8 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>MATHEMATICS PORTAL</h1>
-        <p>単元別・目的別学習ナビゲーション</p>
+        <h1>数学学習ポータル</h1>
         <nav>
             <button onclick="renderUnits('math1')">数学Ⅰ</button>
             <button onclick="renderUnits('math2')">数学Ⅱ</button>
@@ -17,21 +16,14 @@
             <button onclick="renderUnits('mathA')">数学A</button>
             <button onclick="renderUnits('mathB')">数学B</button>
             <button onclick="renderUnits('mathC')">数学C</button>
-            <button onclick="renderUnits('common')" class="nav-special">共通テスト解説</button>
-            <button onclick="renderUnits('exercise')" class="nav-special">演習</button>
         </nav>
     </header>
 
     <main>
-        <div class="title-area">
-            <h2 id="subject-title">数学Ⅰ</h2>
-        </div>
-        <div id="unit-container" class="container"></div>
+        <h2 id="subject-title">数学Ⅰ</h2>
+        <div id="unit-container" class="container">
+            </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Mathematics Study Portal.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
