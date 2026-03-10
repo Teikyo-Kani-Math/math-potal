@@ -5,9 +5,8 @@
 
 body {
     margin: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: sans-serif;
     background-color: var(--bg-color);
-    background-attachment: fixed;
 }
 
 header {
@@ -21,6 +20,8 @@ nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin
 nav button { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 8px 16px; color: white; cursor: pointer; font-weight: bold; }
 nav button:hover { background: white; color: var(--main-blue); }
 
+nav button.nav-special { background: rgba(255, 153, 0, 0.3); border-color: #ff9900; }
+
 main { padding: 2rem 5vw; }
 #subject-title { text-align: center; color: var(--main-blue); margin-bottom: 2rem; }
 
@@ -33,29 +34,29 @@ main { padding: 2rem 5vw; }
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.section-num { font-size: 0.8rem; color: var(--main-blue); font-weight: bold; }
-.unit-title { font-size: 1.2rem; margin: 10px 0 15px 0; }
+.unit-title { font-size: 1.2rem; margin-bottom: 15px; }
 
-/* 大問ボタンを並べる設定 */
-.btn-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
+/* ボタンのレイアウト */
+.btn-group { display: flex; flex-wrap: wrap; gap: 8px; }
 
-.btn-daimon {
-    background: white;
-    border: 2px solid var(--main-blue);
-    color: var(--main-blue);
-    padding: 6px 10px;
+.btn {
+    text-align: center;
+    padding: 8px 12px;
     text-decoration: none;
-    font-size: 0.8rem;
     font-weight: bold;
+    font-size: 0.8rem;
     border-radius: 4px;
     transition: 0.2s;
 }
 
-.btn-daimon:hover {
-    background: var(--main-blue);
-    color: white;
+/* 通常用（動画・プリント） */
+.btn-normal { border: 2px solid var(--main-blue); color: var(--main-blue); flex: 1; }
+.btn-normal.fill { background: var(--main-blue); color: white; }
+
+/* 共通テスト用（大問ボタン） */
+.btn-daimon {
+    border: 2px solid #555;
+    color: #555;
+    min-width: 60px;
 }
+.btn-daimon:hover { background: #555; color: white; }
