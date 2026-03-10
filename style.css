@@ -3,6 +3,7 @@
     --accent-blue: #00d4ff;
     --bg-color: #f8fbff;
     --text-main: #1a2a3a;
+    --accent-orange: #ff9900; /* 追加 */
 }
 
 body {
@@ -29,6 +30,16 @@ header {
 nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
 nav button { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 8px 16px; color: white; cursor: pointer; font-weight: bold; transition: 0.3s; }
 nav button:hover { background: white; color: var(--main-blue); }
+
+/* 共通テスト解説ボタン用の色 */
+nav button.nav-special {
+    background: rgba(255, 153, 0, 0.2);
+    border-color: var(--accent-orange);
+}
+nav button.nav-special:hover {
+    background: var(--accent-orange);
+    color: white;
+}
 
 main { padding: 2rem 5vw; }
 #subject-title { text-align: center; color: var(--main-blue); margin-bottom: 3rem; }
