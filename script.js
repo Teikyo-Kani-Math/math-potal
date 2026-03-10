@@ -9,7 +9,7 @@ const data = {
     mathB: ["数列", "統計的な推測"],
     mathC: ["平面上のベクトル", "空間のベクトル", "複素数平面", "式と曲線"],
     // 共通テスト解説の中身
-    common: ["第１問", "第２問", "第３問", "第４問"]
+    common: ["2025年度"]
 };
 
 /**
@@ -27,8 +27,7 @@ const links = {
     "math2_05": { video: "#", pdf: "#" }, "math2_06": { video: "#", pdf: "#" },
 
     // 共通テスト解説用のリンク例
-    "common_01": { video: "#", pdf: "#" }, // 第１問
-    "common_02": { video: "#", pdf: "#" }  // 第２問
+    "common_01": { video: "#", pdf: "#" }, //2025年度
 };
 
 function renderUnits(subjectKey) {
@@ -77,3 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.innerHTML = "<div style='text-align:center; padding-top:100px;'><h1>認証が必要です</h1></div>";
     }
 });
+
