@@ -48,7 +48,7 @@ function renderUnits(subjectKey) {
                 </div>
                 <div class="btn-group">
                     <a href="${unitLinks.video}" target="_blank" class="btn btn-video">▶ 解説動画</a>
-                    <a href="${unitLinks.pdf}" target="_blank" class="btn btn-pdf">📄 プリント(Drive)</a>
+                    <a href="${unitLinks.pdf}" target="_blank" class="btn btn-pdf">📄 プリント</a>
                 </div>
             </div>
         `;
