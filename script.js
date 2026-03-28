@@ -9,15 +9,19 @@ const data = {
 
 /**
  * リンク管理オブジェクト
- * pdfのところにファイルパスを書くとダウンロードされます。
+ * pdf: の部分にGoogleドライブの「共有リンク」を貼り付けてください。
  */
 const links = {
-    // 数学Ⅰ
-    "math1_01": { video: "#", pdf: "print/m1_01.pdf" },
-    "math1_02": { video: "#", pdf: "print/m1_02.pdf" },
-    // 数学Ⅱ
-    "math2_01": { video: "#", pdf: "print/m2_01.pdf" },
-    // 必要に応じて他の節も追加してください
+    // 例：数学1 第1節（数と式）
+    "math1_01": { 
+        video: "https://www.youtube.com/...", 
+        pdf: "https://drive.google.com/..." 
+    },
+    // 例：数学1 第5節（データの分析）
+    "math1_05": { 
+        video: "https://www.youtube.com/playlist?list=PLib7BLwcvXJbozlWLJh0aXwJ4cFZW3B1v", 
+        pdf: "https://drive.google.com/..." 
+    }
 };
 
 function renderUnits(subjectKey) {
@@ -31,9 +35,11 @@ function renderUnits(subjectKey) {
     };
     title.innerText = subjectNames[subjectKey];
 
-    container.innerHTML = data[subjectKey].map((unitName, i) => {
+    const unitList = data[subjectKey] || [];
+    container.innerHTML = unitList.map((unitName, i) => {
         const unitId = `${subjectKey}_${String(i + 1).padStart(2, '0')}`;
         const unitLinks = links[unitId] || { video: "#", pdf: "#" };
+        
         return `
             <div class="unit-card">
                 <div>
@@ -42,7 +48,7 @@ function renderUnits(subjectKey) {
                 </div>
                 <div class="btn-group">
                     <a href="${unitLinks.video}" target="_blank" class="btn btn-video">▶ 解説動画</a>
-                    <a href="${unitLinks.pdf}" download class="btn btn-pdf">📄 プリント</a>
+                    <a href="${unitLinks.pdf}" target="_blank" class="btn btn-pdf">📄 プリント(Drive)</a>
                 </div>
             </div>
         `;
@@ -51,7 +57,7 @@ function renderUnits(subjectKey) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const keyword = "Teikyokani";
+    const keyword = "Teikyokani"; // 合言葉
     const userInput = prompt("合言葉を入力してください");
     if (userInput === keyword) {
         renderUnits('math1');
