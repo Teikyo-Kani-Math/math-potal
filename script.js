@@ -15,7 +15,7 @@ const links = {
     // 例：数学1 第1節（数と式）
     "math1_01": { 
         video: "https://www.youtube.com/...", 
-        pdf: "https://drive.google.com/drive/folders/1OMqN1LRjSekjua0eWdsrHOcil8gp_r4y?usp=sharing" 
+        pdf: "https://drive.google.com/drive/folders/1OMqN1LRjSekjua0eWdsrHOcil8gp_r4y?usp=drive_link" 
     },
     // 例：数学1 第5節（データの分析）
     "math1_05": { 
