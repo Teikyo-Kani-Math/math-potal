@@ -19,8 +19,8 @@ const links = {
     },
     // 例：数学1 第5節（データの分析）
     "math1_05": { 
-        video: "https://www.youtube.com/playlist?list=PLib7BLwcvXJbozlWLJh0aXwJ4cFZW3B1v", 
-        pdf: "https://drive.google.com/drive/folders/1oD1OwMGdJxqZbZUrClb4flAPChQbbhsP?usp=sharing" 
+        video: "https://drive.google.com/drive/folders/1oD1OwMGdJxqZbZUrClb4flAPChQbbhsP?usp=drive_link", 
+        pdf: "https://www.youtube.com/playlist?list=PLib7BLwcvXJbozlWLJh0aXwJ4cFZW3B1v" 
     }
 };
 
